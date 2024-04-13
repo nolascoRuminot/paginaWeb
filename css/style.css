@@ -6,28 +6,8 @@
     --dark: #404A3D;
 }
 
-.back-to-top {
-    position: fixed;
-    display: none;
-    right: 30px;
-    bottom: 30px;
-    z-index: 99;
-}
 
-.fw-bold {
-    font-weight: 700 !important;
-}
-
-.fw-medium {
-    font-weight: 600 !important;
-}
-
-.fw-semi-bold {
-    font-weight: 500 !important;
-}
-
-
-/*** Spinner ***/
+/*** Spinner ID ***/ 
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -41,6 +21,35 @@
     opacity: 1;
 }
 
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+} 
+
+h1{
+    color:#404A3D;
+    font-weight: 400;
+}
+
+p{
+    color:#404A3D;
+    font-weight: 400;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 500 !important;
+}
 
 /*** Button ***/
 .btn {
