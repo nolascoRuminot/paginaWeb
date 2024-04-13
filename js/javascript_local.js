@@ -27,3 +27,19 @@ this.setCustomValidity('Informacion incorrecta.');
 this.setCustomValidity('');
 }
 });
+
+// Agrega un listener para el evento 'input' en el campo de texto
+document.getElementById('textoInput2').addEventListener('input', function() {
+  // Obtiene el valor del campo de texto
+  var texto = this.value;
+  // Define una expresión regular que solo permita letras y espacios
+  var regex = /^[a-zA-Z\s]*$/;
+  // Verifica si el valor del campo coincide con la expresión regular
+  if (!regex.test(texto)) {
+  // Si no coincide, muestra un mensaje de error
+  this.setCustomValidity('Informacion incorrecta.');
+  } else {
+  // Si coincide, elimina cualquier mensaje de error
+  this.setCustomValidity('');
+  }
+  });
