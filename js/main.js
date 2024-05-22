@@ -64,3 +64,33 @@
     
 })(jQuery);
 
+// uf.js
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('https://mindicador.cl/api/uf')
+        .then(response => response.json())
+        .then(data => {
+            const valorUF = data.serie[0].valor;
+            localStorage.setItem('valorUF', valorUF);
+        })
+        .catch(error => console.error('Error al obtener el valor de la UF:', error));
+});
+// precio.js
+document.addEventListener('DOMContentLoaded', function() {
+    const valorUF = localStorage.getItem('valorUF');
+
+    if (valorUF) {
+        document.querySelectorAll('.product-item').forEach(item => {
+            const ufMultiplier = parseFloat(item.getAttribute('data-uf-multiplier'));
+            const precioEnCLP = ufMultiplier * valorUF;
+            const precioUFElement = item.querySelector('.precio-uf');
+            const precioProductoElement = item.querySelector('.precio-producto');
+
+            precioUFElement.innerText = `${ufMultiplier} UF`;
+            precioProductoElement.innerText = `Valor en CLP ${precioEnCLP.toLocaleString('es-CL', { style: 'currency', currency: 'CLP', minimumFractionDigits: 0 })}`;
+        });
+    }
+});
+
+
+
+
