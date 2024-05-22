@@ -80,6 +80,7 @@
                 <a href="productos.html" class="nav-item nav-link">Productos</a>
                 <a href="clientes.html" class="nav-item nav-link ">Nuestros clientes</a>                
                 <a href="contacto.html" class="nav-item nav-link active">Contacto</a>
+                <button id="btn2" class="btn" data-toggle="modal" data-target="#modal-login">Acceso</button>
             </div>
             
         </div>
@@ -116,25 +117,25 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="textoInput2" placeholder="Nombre" required>
                                     <label for="name">Nombre Completo</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" placeholder="Correo" required>
                                     <label for="email">Correo Eléctronico</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" placeholder="Asunto" required>
                                     <label for="subject">Asunto</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 250px"></textarea>
+                                    <textarea class="form-control" placeholder="Mensaje..." id="message" style="height: 250px"></textarea>
                                     <label for="message">Mensaje</label>
                                 </div>
                             </div>
@@ -249,6 +250,39 @@
     </div>
 </div>
 
+ <!-- modal Login form -->
+ <div id="modal-login" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="card modal-body" >
+            <form>
+                
+                <h3>Acceso</h3>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Usuario</label>
+                  
+                  
+                  <input type="text" class="form-control" id="textoInput"  required>
+                  <div class="invalid-feedback">
+                    Solo se permiten letras y espacios.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Recordar</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /login form -->
+
 
 
     <!-- Back to Top -->
@@ -268,6 +302,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/javascript_local.js"></script>
 </body>
 
 </html>
